@@ -23,6 +23,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Vim Colorschemes
     Plug 'flazz/vim-colorschemes'
+    Plug 'erichdongubler/vim-sublime-monokai' 
+    
+    " Better C++ Highlighting
+    Plug 'octol/vim-cpp-enhanced-highlight'
 
     " Better window resizing using CTRL+E and h, j, k,or l 
     Plug 'simeji/winresizer' 
