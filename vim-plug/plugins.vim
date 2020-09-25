@@ -36,8 +36,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Git Integration
     Plug 'airblade/vim-gitgutter'
-    " Plug 'mhinz/vim-signify'
-     
+    Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
