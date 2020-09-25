@@ -38,6 +38,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
+    " Changes Vim working directory to project root
+    " Plug 'airblade/vim-rooter' (Doesn't seem to be working)
+
+    " fzf in vim
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
