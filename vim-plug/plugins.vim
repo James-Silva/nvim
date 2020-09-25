@@ -28,9 +28,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better C++ Highlighting
     Plug 'octol/vim-cpp-enhanced-highlight'
 
+    " Start Screen and Session Management
+    Plug 'mhinz/vim-startify'
+
     " Better window resizing using CTRL+E and h, j, k,or l 
     Plug 'simeji/winresizer' 
 
+    " Git Integration
+    Plug 'airblade/vim-gitgutter'
+    " Plug 'mhinz/vim-signify'
+     
 call plug#end()
 
 " Automatically install missing plugins on startup
