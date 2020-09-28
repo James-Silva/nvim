@@ -13,6 +13,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     " Nerdy File explorer
     Plug 'scrooloose/NERDTree'
+    
+    " Changes Vim working directory to project root
+    Plug 'airblade/vim-rooter' 
    
     " Status bar
     Plug 'vim-airline/vim-airline'
@@ -38,12 +41,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
-    " Changes Vim working directory to project root
-    " Plug 'airblade/vim-rooter' (Doesn't seem to be working)
-
     " fzf in vim
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+
+    " Quoting/parenthesizing made simple
+    Plug 'tpope/vim-surround'
 
 call plug#end()
 

@@ -15,15 +15,10 @@ set smartcase       " case sensitive only is cases are used
 " turn off search highlight
 nnoremap <CR> :nohlsearch<CR>
 
-"=== Folding ==="
-set foldenable
-set foldmethod=syntax
-set foldlevelstart=6   " open most folds by default
-" space open/closes folds
-nnoremap <space> za
-
 "=== Miscellaneous ==="
-set number          " show line numbers
+set colorcolumn=120
+set number
+set relativenumber          " show line numbers
 set showcmd         " show command in bottom bar 
 set cursorline      " highlight current line
 set wildmenu        " visual autocomplete for command menu
