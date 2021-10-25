@@ -8,6 +8,17 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+    Plug 'tpope/vim-obsession'
+
+    " Intellisense engine
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    
+    " Nerdy File explorer
+    Plug 'scrooloose/NERDTree'
+    
+    " Changes Vim working directory to project root
+    Plug 'airblade/vim-rooter' 
+   
     " Status bar
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'

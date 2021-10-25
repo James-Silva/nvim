@@ -14,10 +14,6 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/tagbar.vim
 source $HOME/.config/nvim/plug-config/cpp-enhanced-highlight.vim
 source $HOME/.config/nvim/plug-config/startify.vim
+source $HOME/.config/nvim/plug-config/sublime-monokai.vim
 
-" Temp Commands
-command! S s/\*/\&/g
-command! V s/->/./g
-
-" TEMP SNEAK Commands
-let g:sneak#use_ic_scs=1
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
