@@ -8,7 +8,7 @@ nnoremap k gk
 imap jj <Esc>
 
 "=== Window Management ==="
-set winwidth=100 " Force minimum width
+" set winwidth=100 " Force minimum width
 
 " Control and direction changing panes
 noremap <C-l> <C-w>l

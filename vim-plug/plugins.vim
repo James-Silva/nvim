@@ -8,6 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+    Plug 'tpope/vim-obsession'
+
     " Intellisense engine
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     
