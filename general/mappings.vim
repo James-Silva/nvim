@@ -26,3 +26,5 @@ noremap <leader>e $
 " set working directory to the current file
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
+" exit terminal with ESC
+tnoremap <Esc> <C-\><C-n>
