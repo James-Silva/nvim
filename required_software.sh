@@ -1,1 +1,4 @@
-sudo apt install neovim nodejs -y
+#Install latest nodejs
+curl -sL install-node.now.sh/lts | bash
+
+sudo apt install neovim -y
