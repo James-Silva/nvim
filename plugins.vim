@@ -8,17 +8,17 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    Plug 'tpope/vim-obsession'
+	"=== IDE Things ===
 
     " Intellisense engine
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
     
-    " Nerdy File explorer
+	" Syntax Checking
+	" Plug 'vim-syntastic/syntastic'
+
+    " File explorer
     Plug 'scrooloose/NERDTree'
     
-    " Changes Vim working directory to project root
-    Plug 'airblade/vim-rooter' 
-   
     " Status bar
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -31,9 +31,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'sainnhe/gruvbox-material'
 	Plug 'sjl/badwolf'
     Plug 'octol/vim-cpp-enhanced-highlight'
-
-    " Intellisense engine
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 	" Tags
 	Plug 'preservim/tagbar'
@@ -49,17 +46,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
-	" Syntax Checking
-	Plug 'vim-syntastic/syntastic'
 
-    """ Asthetics
-    " Start Screen and Session Management
-    Plug 'mhinz/vim-startify'
-    " Nerdy File explorer (Try and get rid of this for ranger and fzf!)
-    Plug 'scrooloose/NERDTree'
-    Plug 'tpope/vim-obsession'
-
-    """ Editor Things
+    "=== Quality of Life Things ===
     " Jump to any location specified by two characters
     Plug 'justinmk/vim-sneak'
     " Better commenting
@@ -70,6 +58,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'tpope/vim-surround'
 	" Pairs of handy bracket mappings
 	Plug 'tpope/vim-unimpaired'	
+    " Start Screen and Session Management
+    Plug 'mhinz/vim-startify'
+	" Vim Sessions
+    Plug 'tpope/vim-obsession'
 
 call plug#end()
 
