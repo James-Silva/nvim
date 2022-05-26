@@ -13,6 +13,20 @@ let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 " let $FZF_DEFAULT_COMMAND="rg.exe --files"
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
+"=== Helper for the below remapping ===
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+"=== Remap v-split since it's mapped to paste ===
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-x': 'vsplit' }
+
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(
   \   'git grep --color=always --line-number -- '.shellescape(<q-args>), 0,
@@ -32,6 +46,7 @@ nnoremap <silent> <space>G :GGrep <C-R><C-W><CR>
 nnoremap <silent> <space>A :Ag <C-R><C-W><CR>
 nnoremap <silent> <space>R :Rg <C-R><C-W><CR>
 nnoremap <silent> <space>L :BLines <C-R><C-W><CR>
+nnoremap <silent> <space>F :call fzf#vim#files('.', {'options':'--query '.expand('<cword>')})<CR>
 
 " This is the default option:
 " "   - Preview window on the right with 50% width

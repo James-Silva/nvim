@@ -14,7 +14,7 @@ imap kk <Esc>:wa<CR>
 
 
 "=== Window Management ==="
-" set winwidth=100 " Force minimum width
+set winwidth=120 " Force minimum width
 
 " Control and direction changing panes
 noremap <C-l> <C-w>l
@@ -49,6 +49,9 @@ map <leader>o :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <leader>ov :vs %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <leader>os :sp %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
-" === Open C++ Header/Source Files ==="
+" === Bindings in the spirit of vim-unimpaired ==="
 noremap ]w <ESC>:set wrap!<CR>
 noremap [w <ESC>:set wrap<CR>
+
+" === Coc-cmake ==="
+nnoremap <silent> cB :CMakeBuild -j8<CR>

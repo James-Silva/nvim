@@ -8,10 +8,13 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+	" Test
+	Plug 'cdelledonne/vim-cmake'
+
 	"=== IDE Things ===
 
     " Intellisense engine
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     
 	" Syntax Checking
 	" Plug 'vim-syntastic/syntastic'
