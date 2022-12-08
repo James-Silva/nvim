@@ -14,7 +14,7 @@ imap kk <Esc>:wa<CR>
 
 
 "=== Window Management ==="
-set winwidth=120 " Force minimum width
+set winwidth=126 " Force minimum width
 
 " Control and direction changing panes
 noremap <C-l> <C-w>l
@@ -53,5 +53,6 @@ map <leader>os :sp %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 noremap ]w <ESC>:set wrap!<CR>
 noremap [w <ESC>:set wrap<CR>
 
-" === Coc-cmake ==="
-nnoremap <silent> cB :CMakeBuild -j8<CR>
+" === CLIBS_UNIX work ==="
+nmap <leader>CU ci}#ifndef CLIBS_UNIX<CR>#elseNotImplementedOnLinux();#endif<Esc>P
+vmap <leader>CU c#ifndef CLIBS_UNIX<CR>#endif<Esc>P
