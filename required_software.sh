@@ -1,4 +1,9 @@
-#Install latest nodejs
-curl -sL install-node.now.sh/lts | bash
+pkgMan="apt"
 
-sudo apt install neovim -y
+# Install latest nodejs (May need a more updated version)
+sudo $pkgMan install \
+        nodejs \
+        universal-ctags
+        -y
+
+# Install the latest neovim seperately
